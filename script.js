@@ -1,50 +1,86 @@
-// ========================================
-// SURPRESA AO CLICAR NO BOTÃO
-// ========================================
+document.addEventListener("DOMContentLoaded", () => {
 
-const botaoMensagem = document.querySelector('a[href="#mensagem"]');
+    // ========================================
+    // SISTEMA DE SENHA
+    // ========================================
 
-botaoMensagem.addEventListener("click", () => {
+    const senhaCorreta = "mae123";
 
-    // Quantidade de corações
-    for (let i = 0; i < 20; i++) {
+    const telaSenha = document.getElementById("telaSenha");
+    const campoSenha = document.getElementById("senha");
+    const botaoEntrar = document.getElementById("entrar");
+    const mensagemErro = document.getElementById("erro");
 
-        const coracao = document.createElement("span");
+    botaoEntrar.addEventListener("click", verificarSenha);
 
-        coracao.textContent = "❤️";
+    // Também permite apertar ENTER
+    campoSenha.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            verificarSenha();
+        }
+    });
 
-        // Estilos do coração
-        coracao.style.position = "fixed";
-        coracao.style.left = Math.random() * 100 + "vw";
-        coracao.style.top = Math.random() * 100 + "vh";
-        coracao.style.fontSize = Math.random() * 20 + 15 + "px";
-        coracao.style.zIndex = "9999";
-        coracao.style.pointerEvents = "none";
+    function verificarSenha() {
 
-        // Animação
-        coracao.animate(
-            [
-                {
-                    transform: "translateY(0) scale(1)",
-                    opacity: 1
-                },
-                {
-                    transform: `translateY(-${100 + Math.random() * 200}px) scale(0)`,
-                    opacity: 0
-                }
-            ],
-            {
-                duration: 1200 + Math.random() * 1000,
-                easing: "ease-out"
-            }
-        );
+        if (campoSenha.value === senhaCorreta) {
 
-        document.body.appendChild(coracao);
+            telaSenha.style.display = "none";
 
-        // Remove o coração depois da animação
-        setTimeout(() => {
-            coracao.remove();
-        }, 2500);
+        } else {
+
+            mensagemErro.textContent = "Senha incorreta ❤️";
+
+            campoSenha.value = "";
+            campoSenha.focus();
+        }
     }
+
+
+    // ========================================
+    // SURPRESA AO CLICAR NO BOTÃO
+    // ========================================
+
+    const botaoMensagem = document.querySelector('a[href="#mensagem"]');
+
+    botaoMensagem.addEventListener("click", () => {
+
+        for (let i = 0; i < 20; i++) {
+
+            const coracao = document.createElement("span");
+
+            coracao.textContent = "❤️";
+
+            coracao.style.position = "fixed";
+            coracao.style.left = Math.random() * 100 + "vw";
+            coracao.style.top = Math.random() * 100 + "vh";
+            coracao.style.fontSize = Math.random() * 20 + 15 + "px";
+            coracao.style.zIndex = "9999";
+            coracao.style.pointerEvents = "none";
+
+            coracao.animate(
+                [
+                    {
+                        transform: "translateY(0) scale(1)",
+                        opacity: 1
+                    },
+                    {
+                        transform: `translateY(-${100 + Math.random() * 200}px) scale(0)`,
+                        opacity: 0
+                    }
+                ],
+                {
+                    duration: 1200 + Math.random() * 1000,
+                    easing: "ease-out"
+                }
+            );
+
+            document.body.appendChild(coracao);
+
+            setTimeout(() => {
+                coracao.remove();
+            }, 2500);
+        }
+
+    });
 
 });

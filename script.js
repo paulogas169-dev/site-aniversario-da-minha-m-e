@@ -4,36 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // SISTEMA DE SENHA
     // ========================================
 
-    const senhaCorreta = "mae123";
-
-    const telaSenha = document.getElementById("telaSenha");
-    const campoSenha = document.getElementById("senha");
-    const botaoEntrar = document.getElementById("entrar");
-    const mensagemErro = document.getElementById("erro");
-
-    botaoEntrar.addEventListener("click", verificarSenha);
-
-    // Também permite apertar ENTER
-    campoSenha.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-            verificarSenha();
-        }
-    });
-
-    function verificarSenha() {
-
-        if (campoSenha.value === senhaCorreta) {
-
-            telaSenha.style.display = "none";
-
-        } else {
-
-            mensagemErro.textContent = "Senha incorreta ❤️";
-
-            campoSenha.value = "";
-            campoSenha.focus();
-        }
-    }
 
 
     // ========================================

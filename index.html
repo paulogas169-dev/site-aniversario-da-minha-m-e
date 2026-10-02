@@ -7,388 +7,354 @@
 
     <title>Feliz Aniversário, Mãe ❤️</title>
 
-    <!-- CSS será adicionado posteriormente -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Feliz Aniversário, Mãe ❤️</title>
-
-    <!-- CSS será adicionado posteriormente -->
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <div id="telaSenha">
-    <h1>🔐 Uma surpresa para você</h1>
-
-    <p>Digite a senha para abrir seu presente ❤️</p>
-
-    <input type="password" id="senha" placeholder="Digite a senha">
-
-    <button id="entrar">Entrar ❤️</button>
-
-    <p id="erro"></p>
-</div>
-
-    <header>
-        <nav>
-            <h2>Para você, mãe ❤️</h2>
-
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#mensagem">Mensagem</a></li>
-                <li><a href="#memorias">Memórias</a></li>
-                <li><a href="#final">❤️</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
-    <main>
-
-        <!-- INÍCIO -->
-
-        <section id="inicio">
-
-            <div>
-                <p>Uma mensagem especial para uma pessoa especial</p>
-
-                <h1>
-                    Feliz aniversário,<br>
-                    mãe! ❤️
-                </h1>
-
-                <p>
-                    Hoje é o seu dia.
-                    E eu preparei algo especial para você.
-                </p>
-
-                <a href="#mensagem">
-                    Ler minha mensagem
-                </a>
-            </div>
-
-        </section>
-
-
-        <!-- MENSAGEM -->
-
-        <section id="mensagem">
-
-            <div>
-
-                <p>Uma pequena carta</p>
-
-                <h2>Para você, mãe.</h2>
-
-                <p>
-                    Mãe, hoje é um dia muito especial,
-                    porque celebramos a sua vida.
-                </p>
-
-                <p>
-                    Quero aproveitar esse momento para
-                    agradecer por tudo que você representa
-                    para mim.
-                </p>
-
-                <p>
-                    Obrigado por cada conselho, cada cuidado,
-                    cada momento e por sempre estar presente.
-                </p>
-
-                <p>
-                    Espero que esse novo ano da sua vida seja
-                    cheio de felicidade, saúde, amor e sonhos
-                    realizados.
-                </p>
-
-                <p>
-                    Eu te amo muito. ❤️
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- MEMÓRIAS -->
-
-        <section id="memorias">
-
-            <div>
-
-                <p>Nossos momentos</p>
-
-                <h2>Algumas memórias</h2>
-
-                <div>
-
-                    <article>
-                        <img src="imagens/mae1.jpeg" alt="Foto especial com minha mãe">
-                        <h3>Um momento especial</h3>
-                    </article>
-
-                    <article>
-                        <img src="imagens/mae2.jpeg" alt="Foto especial com minha mãe">
-                        <h3>Uma lembrança inesquecível</h3>
-                    </article>
-
-                    <article>
-                        <img src="imagens/mae3.jpeg" alt="Foto especial com minha mãe">
-                        <h3>Um momento para guardar</h3>
-                    </article>
-
-                     <article>
-                        <img src="imagens/mae4.jpeg" alt="Foto especial com minha mãe">
-                        <h3>Para a aniversariante</h3>
-                    </article>
-
-                     <article>
-                        <img src="imagens/mae5.jpeg" alt="Foto especial com minha mãe">
-                        <h3>Uma pessoa especial</h3>
-                    </article>
-
-                     <article>
-                        <img src="imagens/mae6.jpeg" alt="Foto especial com minha mãe">
-                        <h3>Amo-te</h3>
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- FINAL -->
-
-        <section id="final">
-
-            <div>
-
-                <h2>
-                    Obrigado por existir. ❤️
-                </h2>
-
-                <p>
-                    Que seu novo ano seja tão especial
-                    quanto você é para mim.
-                </p>
-
-                <p>
-                    Feliz aniversário, mãe!
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-
-        <p>
-            Feito com amor ❤️
-        </p>
-
-    </footer>
 
     
 
+   <script>
+    const senhaCorreta = "aniversariante39";
 
-    <!-- JavaScript será adicionado posteriormente -->
-    <script src="script.js"></script>
+    const senha = prompt("🔐 Digite a senha para acessar a surpresa:");
 
-</body>
+    if (senha !== senhaCorreta) {
 
-</html>
-```
+        document.documentElement.innerHTML = `
+            <head>
+                <title>Acesso bloqueado</title>
+                <style>
+                    html, body {
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                    }
+
+                    body {
+                        background: #12080d;
+                        color: white;
+                        font-family: Arial, sans-serif;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                    }
+
+                    div {
+                        padding: 30px;
+                    }
+
+                    h1 {
+                        font-size: 40px;
+                        margin-bottom: 15px;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        opacity: 0.8;
+                    }
+                </style>
+            </head>
+
+            <body>
+
+                <div>
+                    <h1>🔒 Acesso bloqueado</h1>
+
+                    <p>
+                        Essa surpresa é somente para a aniversariante ❤️
+                    </p>
+                </div>
+
+            </body>
+        `;
+
+        // Para a execução imediatamente
+        throw new Error("Acesso bloqueado.");
+
+    }
+</script>
+
+ 
+        <header>
+
+            <nav>
+
+                <h2>Para você, mãe ❤️</h2>
+
+                <ul>
+                    <li>
+                        <a href="#inicio">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="#mensagem">Mensagem</a>
+                    </li>
+
+                    <li>
+                        <a href="#memorias">Memórias</a>
+                    </li>
+
+                    <li>
+                        <a href="#final">❤️</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </header>
 
 
-    <header>
-        <nav>
-            <h2>Para você, mãe ❤️</h2>
+        <!-- ========================================
+             CONTEÚDO PRINCIPAL
+             ======================================== -->
 
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#mensagem">Mensagem</a></li>
-                <li><a href="#memorias">Memórias</a></li>
-                <li><a href="#final">❤️</a></li>
-            </ul>
-        </nav>
-    </header>
+        <main>
 
 
-    <main>
+            <!-- ========================================
+                 INÍCIO
+                 ======================================== -->
 
-        <!-- INÍCIO -->
-
-        <section id="inicio">
-
-            <div>
-                <p>Uma mensagem especial para uma pessoa especial</p>
-
-                <h1>
-                    Feliz aniversário,<br>
-                    mãe! ❤️
-                </h1>
-
-                <p>
-                    Hoje é o seu dia.
-                    E eu preparei algo especial para você.
-                </p>
-
-                <a href="#mensagem">
-                    Ler minha mensagem
-                </a>
-            </div>
-
-        </section>
-
-
-        <!-- MENSAGEM -->
-
-        <section id="mensagem">
-
-            <div>
-
-                <p>Uma pequena carta</p>
-
-                <h2>Para você, mãe.</h2>
-
-                <p>
-                    Mãe, hoje é um dia muito especial,
-                    porque celebramos a sua vida.
-                </p>
-
-                <p>
-                    Quero aproveitar esse momento para
-                    agradecer por tudo que você representa
-                    para mim.
-                </p>
-
-                <p>
-                    Obrigado por cada conselho, cada cuidado,
-                    cada momento e por sempre estar presente.
-                </p>
-
-                <p>
-                    Espero que esse novo ano da sua vida seja
-                    cheio de felicidade, saúde, amor e sonhos
-                    realizados.
-                </p>
-
-                <p>
-                    Eu te amo muito. ❤️
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- MEMÓRIAS -->
-
-        <section id="memorias">
-
-            <div>
-
-                <p>Nossos momentos</p>
-
-                <h2>Algumas memórias</h2>
+            <section id="inicio">
 
                 <div>
 
-                    <article>
-                        <img src="imagens/mae1.jpeg" alt="Foto especial com minha mãe">
-                        <h3>Um momento especial</h3>
-                    </article>
+                    <p>
+                        Uma mensagem especial para uma pessoa especial
+                    </p>
 
-                    <article>
-                        <img src="imagens/mae2.jpeg" alt="Foto especial com minha mãe">
-                        <h3>Uma lembrança inesquecível</h3>
-                    </article>
+                    <h1>
+                        Feliz aniversário,<br>
+                        mãe! ❤️
+                    </h1>
 
-                    <article>
-                        <img src="imagens/mae3.jpeg" alt="Foto especial com minha mãe">
-                        <h3>Um momento para guardar</h3>
-                    </article>
+                    <p>
+                        Hoje é o seu dia.
+                        E eu preparei algo especial para você.
+                    </p>
 
-                     <article>
-                        <img src="imagens/mae4.jpeg" alt="Foto especial com minha mãe">
-                        <h3>Para a aniversariante</h3>
-                    </article>
-
-                     <article>
-                        <img src="imagens/mae5.jpeg" alt="Foto especial com minha mãe">
-                        <h3>Uma pessoa especial</h3>
-                    </article>
-
-                     <article>
-                        <img src="imagens/mae6.jpeg" alt="Foto especial com minha mãe">
-                        <h3>Amo-te</h3>
-                    </article>
+                    <a href="#mensagem">
+                        Ler minha mensagem
+                    </a>
 
                 </div>
 
-            </div>
-
-        </section>
+            </section>
 
 
-        <!-- FINAL -->
+            <!-- ========================================
+                 MENSAGEM
+                 ======================================== -->
 
-        <section id="final">
+            <section id="mensagem">
 
-            <div>
+                <div>
 
-                <h2>
-                    Obrigado por existir. ❤️
-                </h2>
+                    <p>
+                        Uma pequena carta
+                    </p>
 
-                <p>
-                    Que seu novo ano seja tão especial
-                    quanto você é para mim.
-                </p>
+                    <h2>
+                        Para você, mãe.
+                    </h2>
 
-                <p>
-                    Feliz aniversário, mãe!
-                </p>
+                    <p>
+                        Mãe, hoje é um dia muito especial,
+                        porque celebramos a sua vida.
+                    </p>
 
-            </div>
+                    <p>
+                        Quero aproveitar esse momento para
+                        agradecer por tudo que você representa
+                        para mim.
+                    </p>
 
-        </section>
+                    <p>
+                        Obrigado por cada conselho, cada cuidado,
+                        cada momento e por sempre estar presente.
+                    </p>
 
-    </main>
+                    <p>
+                        Espero que esse novo ano da sua vida seja
+                        cheio de felicidade, saúde, amor e sonhos
+                        realizados.
+                    </p>
+
+                    <p>
+                        Eu te amo muito. ❤️
+                    </p>
+
+                </div>
+
+            </section>
 
 
-    <footer>
+            <!-- ========================================
+                 MEMÓRIAS
+                 ======================================== -->
 
-        <p>
-            Feito com amor ❤️
-        </p>
+            <section id="memorias">
 
-    </footer>
+                <div>
+
+                    <p>
+                        Nossos momentos
+                    </p>
+
+                    <h2>
+                        Algumas memórias
+                    </h2>
+
+                    <div>
 
 
+                        <article>
+
+                            <img 
+                                src="imagens/mae1.jpeg" 
+                                alt="Foto especial com minha mãe"
+                            >
+
+                            <h3>
+                                Um momento especial
+                            </h3>
+
+                        </article>
 
 
-    <!-- JavaScript será adicionado posteriormente -->
+                        <article>
+
+                            <img 
+                                src="imagens/mae2.jpeg" 
+                                alt="Foto especial com minha mãe"
+                            >
+
+                            <h3>
+                                Uma lembrança inesquecível
+                            </h3>
+
+                        </article>
+
+
+                        <article>
+
+                            <img 
+                                src="imagens/mae3.jpeg" 
+                                alt="Foto especial com minha mãe"
+                            >
+
+                            <h3>
+                                Um momento para guardar
+                            </h3>
+
+                        </article>
+
+
+                        <article>
+
+                            <img 
+                                src="imagens/mae4.jpeg" 
+                                alt="Foto especial com minha mãe"
+                            >
+
+                            <h3>
+                                Para a aniversariante
+                            </h3>
+
+                        </article>
+
+
+                        <article>
+
+                            <img 
+                                src="imagens/mae5.jpeg" 
+                                alt="Foto especial com minha mãe"
+                            >
+
+                            <h3>
+                                Uma pessoa especial
+                            </h3>
+
+                        </article>
+
+
+                        <article>
+
+                            <img 
+                                src="imagens/mae6.jpeg" 
+                                alt="Foto especial com minha mãe"
+                            >
+
+                            <h3>
+                                Amo-te
+                            </h3>
+
+                        </article>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================================
+                 FINAL
+                 ======================================== -->
+
+            <section id="final">
+
+                <div>
+
+                    <h2>
+                        Obrigado por existir. ❤️
+                    </h2>
+
+                    <p>
+                        Que seu novo ano seja tão especial
+                        quanto você é para mim.
+                    </p>
+
+                    <p>
+                        Feliz aniversário, mãe!
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+        <!-- ========================================
+             RODAPÉ
+             ======================================== -->
+
+        <footer>
+
+            <p>
+                Feito com amor ❤️
+            </p>
+
+        </footer>
+
+
+    </div>
+
+
+    <!-- ========================================
+         JAVASCRIPT
+         ======================================== -->
+
     <script src="script.js"></script>
 
 </body>
 
 </html>
-```
